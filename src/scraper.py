@@ -37,19 +37,19 @@ def fetch_duckduckgo_news(query, max_results=50):
             data.append([title, clean_url, timestamp])
 
 
-    #     # เขียนลง CSV
-    #     with open("data/scraped_results.csv", mode="a", newline="", encoding="utf-8") as file:
-    #         writer = csv.writer(file)
+        # เขียนลง CSV
+        with open("data/scraped_results.csv", mode="a", newline="", encoding="utf-8") as file:
+            writer = csv.writer(file)
             
-    #         # ถ้าไฟล์ยังไม่มี header
-    #         if os.stat("data/scraped_results.csv").st_size == 0:
-    #             writer.writerow(["title", "url", "timestamp"])
+            # ถ้าไฟล์ยังไม่มี header
+            if os.stat("data/scraped_results.csv").st_size == 0:
+                writer.writerow(["title", "url", "timestamp"])
 
-    #         writer.writerows(data)
+            writer.writerows(data)
 
-    #     print(f"📁 บันทึก {len(data)} รายการลง data/scraped_results.csv เรียบร้อยแล้ว")
-    # else:
-    #     print(f"❌ เกิดข้อผิดพลาด: {response.status_code}")
+        print(f"📁 บันทึก {len(data)} รายการลง data/scraped_results.csv เรียบร้อยแล้ว")
+    else:
+        print(f"❌ เกิดข้อผิดพลาด: {response.status_code}")
 
 # เรียกใช้งาน
 fetch_duckduckgo_news("sustainable construction materials")
