@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 from datetime import datetime
 import os
+import time
 
 # ฟังก์ชันดึง URL จริงจาก DuckDuckGo (ปลดรหัส)
 def decode_duckduckgo_url(url):
@@ -17,39 +18,51 @@ def decode_duckduckgo_url(url):
 # ฟังก์ชันหลักในการดึงข้อมูลและบันทึก
 def fetch_duckduckgo_news(query, max_results=50):
     url = f'https://duckduckgo.com/html/?q={query}'
-    response = requests.get(url)
+    
+    # เพิ่ม headers เพื่อหลีกเลี่ยงการบล็อค
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
 
-    if response.status_code == 200:
-        print("✅ สำเร็จในการดึงข้อมูล")
+    # ลองส่ง request 3 ครั้ง
+    for attempt in range(3):
+        response = requests.get(url, headers=headers)
 
-        soup = BeautifulSoup(response.text, 'html.parser')
-        results = soup.find_all('a', {'class': 'result__a'})
+        if response.status_code == 200:
+            print("✅ สำเร็จในการดึงข้อมูล")
 
-        data = []
-        timestamp = datetime.now().isoformat()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            results = soup.find_all('a', {'class': 'result__a'})
 
-        for idx, result in enumerate(results):
-            title = result.get_text()
-            raw_url = result['href']
-            clean_url = decode_duckduckgo_url(raw_url)
-            print(f"{idx+1}. {title}")
-            print(f"   URL: {clean_url}")
-            data.append([title, clean_url, timestamp])
+            data = []
+            timestamp = datetime.now().isoformat()
 
+            for idx, result in enumerate(results):
+                title = result.get_text()
+                raw_url = result['href']
+                clean_url = decode_duckduckgo_url(raw_url)
+                print(f"{idx+1}. {title}")
+                print(f"   URL: {clean_url}")
+                data.append([title, clean_url, timestamp])
 
-#         # เขียนลง CSV
-#         with open("data/scraped_results.csv", mode="a", newline="", encoding="utf-8") as file:
-#             writer = csv.writer(file)
-            
-#             # ถ้าไฟล์ยังไม่มี header
-#             if os.stat("data/scraped_results.csv").st_size == 0:
-#                 writer.writerow(["title", "url", "timestamp"])
+            # เขียนลง CSV
+            os.makedirs("data", exist_ok=True)
+            with open("data/scraped_results.csv", mode="a", newline="", encoding="utf-8") as file:
+                writer = csv.writer(file)
+                
+                # ถ้าไฟล์ยังไม่มี header
+                if os.stat("data/scraped_results.csv").st_size == 0:
+                    writer.writerow(["title", "url", "timestamp"])
 
-#             writer.writerows(data)
+                writer.writerows(data)
 
-#         print(f"📁 บันทึก {len(data)} รายการลง data/scraped_results.csv เรียบร้อยแล้ว")
-#     else:
-#         print(f"❌ เกิดข้อผิดพลาด: {response.status_code}")
+            print(f"📁 บันทึก {len(data)} รายการลง data/scraped_results.csv เรียบร้อยแล้ว")
+            break
+        else:
+            print(f"❌ เกิดข้อผิดพลาด: {response.status_code}, พยายามใหม่ครั้งที่ {attempt+1}...")
+            time.sleep(3)  # รอ 3 วินาทีก่อนจะลองใหม่
+    else:
+        print("❌ ไม่สามารถดึงข้อมูลได้หลังจากลอง 3 ครั้ง")
 
-# # เรียกใช้งาน
+# เรียกใช้งาน
 fetch_duckduckgo_news("sustainable construction materials")
