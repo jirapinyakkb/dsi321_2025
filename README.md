@@ -17,6 +17,7 @@ Make sure you have Python 3.7+ installed, then install the following packages:
 - `duckduckgo-search`
 
 Install them via:
+
     ```bash
     pip install -r requirements.txt
 
