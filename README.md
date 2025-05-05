@@ -54,8 +54,8 @@ The script ensures there are no duplicate links, even when running multiple time
     python src/check_duplicates.py
 
 
-    This script will read from:
-    
+# This script will read from:
+
     ```bash
     data/testv1_scraped.csv
 
