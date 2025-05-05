@@ -31,6 +31,8 @@ Install them via:
     ```bash
     python src/testv1_scraper.py
 
+# First Day
+
 3. The script will fetch news articles based on these keywords:
     ```bash
      search_keywords = [
@@ -38,22 +40,6 @@ Install them via:
     "eco friendly building materials",
     "alternative construction methods",
     "green building materials",
-    "recycled construction materials",
-    "low carbon construction materials",
-    "biodegradable construction materials",
-    "natural building materials",
-    "energy efficient building materials",
-    "renewable construction resources",
-    "zero waste construction materials",
-    "earth friendly construction",
-    "carbon neutral building materials",
-    "hempcrete construction",
-    "bamboo construction materials",
-    "rammed earth construction",
-    "reclaimed wood building materials",
-    "innovative sustainable construction",
-    "circular economy construction materials",
-    "sustainable architecture materials"
     ]
 
 4. All results will be automatically saved to:
