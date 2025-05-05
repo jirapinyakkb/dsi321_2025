@@ -18,6 +18,7 @@ This project is a web scraper built using Python. It fetches search results from
    git clone https://github.com/yourusername/dsi321_2025.git
 
 2. Install the required libraries:
+    ```bash
     pip install -r requirements.txt
 
 ## Usage

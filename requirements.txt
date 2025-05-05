@@ -2,3 +2,5 @@ duckduckgo-search
 pandas
 requests
 beautifulsoup4
+selenium
+webdriver-manager
