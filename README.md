@@ -56,7 +56,6 @@ The script ensures there are no duplicate links, even when running multiple time
 
 # This script will read from:
 
-    ```bash
     data/testv1_scraped.csv
 
 and show how many duplicates exist, if any.
