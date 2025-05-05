@@ -144,4 +144,4 @@ def fetch_duckduckgo_news(query, max_results=50):
         print("❌ ไม่สามารถดึงข้อมูลได้หลังจากลอง 3 ครั้ง")
 
 # เรียกใช้งาน
-fetch_duckduckgo_news("sustainable construction materials")
+fetch_duckduckgo_news("alternative meterials for construction")

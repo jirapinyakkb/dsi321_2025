@@ -25,5 +25,13 @@ This project is a web scraper built using Python. It fetches search results from
 
     To run the scraper:
     python src/scraper.py
+
+This will fetch the DuckDuckGo search results for the query:
+     ```bash
+    sustainable construction materials
+
+The script will display the results in the terminal and automatically save them to:
+     ```bash
+    data/scraped_results.csv
     
 This will fetch the DuckDuckGo search results for the query sustainable construction materials and print the results in the terminal. It will also append the results to a CSV file called data/scraped_results.csv.
