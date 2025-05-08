@@ -65,9 +65,14 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
 
 # Second Day
 
-6. The script will fetch news articles based on these keywords:
+6. Add the script will fetch news articles based on these keywords:
     ```bash
+
      search_keywords = [
+    "sustainable construction materials",
+    "eco friendly building materials",
+    "alternative construction methods",
+    "green building materials",
     "recycled construction materials",
     "low carbon construction materials",
     "biodegradable construction materials",
