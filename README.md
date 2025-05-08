@@ -151,6 +151,7 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
 
 
 10. how to check min_max_publish
+
     ```bash
     python src/minmax_publish.py
     ```
@@ -160,7 +161,7 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
 
 The output 
 
-1. CSV file includes the following columns:
+1. `testv1_scraped.csv ` file includes the following columns:
 
    - title: News title
    - link: Direct URL to the news
