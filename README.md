@@ -3,6 +3,22 @@
 This project is a web scraper built using Python. It fetches news search results related to sustainable and alternative construction materials from Google News RSS (via `feedparser`) and stores them in a CSV file for further analysis.
 
 ---
+# File Structure
+.
+├── README.md
+├── data
+│   └── testv1_scraped.csv
+├── requirements.txt
+└── src
+    ├── __pycache__
+    │   └── generate_wordcloud.cpython-313.pyc
+    ├── check_duplicates.py
+    ├── generate_wordcloud.py
+    ├── minmax_publish.py
+    └── testv1_scraper.py
+└── venv
+└── image
+    └── wordcloud.jpg
 
 #  Requirements
 
@@ -14,7 +30,10 @@ Make sure you have Python 3.7+ installed, then install the following packages:
 - `beautifulsoup4`
 - `selenium`
 - `webdriver-manager`
-- `duckduckgo-search`
+- `feedparser`
+- `wordcloud `
+- `matplotlib`
+
 
 Install them via:
 
@@ -34,9 +53,15 @@ Install them via:
     source venv/bin/activate
     ```
 
-# First Day
+3. Run for scraping
+    ```bash
+    python src/testv1_craper.py
+    ```
 
-3. The script will fetch news articles based on these keywords:
+
+# First Run
+
+4. The script will fetch news articles based on these keywords:
     ```bash
      search_keywords = [
     "sustainable construction materials",
@@ -45,13 +70,13 @@ Install them via:
     "green building materials"
     ]
 
-4. All results will be automatically saved to:
+5. All results will be automatically saved to:
     ```bash
     data/testv1_scraped.csv
 
 The script ensures there are no duplicate links, even when running multiple times.
 
-5. Check for Duplicates
+6. Check for Duplicates
     To verify if there are any duplicate news entries (based on both title and link), you can run:
     ```bash
     python src/check_duplicates.py
@@ -66,9 +91,9 @@ and show how many duplicates exist, if any.
 The check is based on (title, link) pairs.
 It helps ensure your dataset is clean and ready for further analysis or visualization.
 
-# Second Day
+# Second Run
 
-6. Add the script will fetch news articles based on these keywords:
+7. Add the script will fetch news articles based on these keywords:
     ```bash
 
      search_keywords = [
@@ -83,17 +108,55 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
     "energy efficient building materials",
     ]
 
+# Third Run
+
+8. Add the script will fetch news articles based on these keywords:
+    ```bash
+
+    search_keywords = [
+    "sustainable construction materials",
+    "eco friendly building materials",
+    "alternative construction methods",
+    "green building materials",
+    "recycled construction materials",
+    "low carbon construction materials",
+    "biodegradable construction materials",
+    "natural building materials",
+    "energy efficient building materials",
+    "renewable construction resources",
+    "zero waste construction materials",
+    "earth friendly construction",
+    "carbon neutral building materials",
+    "hempcrete construction",
+    "rammed earth construction",
+    "reclaimed wood building materials",
+    "innovative sustainable construction",
+    "circular economy construction materials",
+    "sustainable architecture materials"
+    ]
+
+# How to run for create WORDCLOUD   
+
+9. ```bash
+    python src/generate_wordcloud.py
+    ```
+
+###  Word Cloud from News title
+
+![Word Cloud](image/wordcloud.jpg)
 
 
 # Output
 
-The output CSV file includes the following columns:
+The output 
 
-title: Article title
-link: Direct URL to the news
-published: Published date
-fetched_at: The timestamp the data was fetched
-keyword: The search keyword that matched the article
+1. CSV file includes the following columns:
 
-    
+   - title: News title
+   - link: Direct URL to the news
+   - published: Published date
+   - fetched_at: The timestamp the data was fetched
+   - keyword: The search keyword that matched the article
+
+2. Wordcloud form `src/generate_wordcloud.py`
 

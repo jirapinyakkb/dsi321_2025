@@ -14,6 +14,16 @@ search_keywords = [
     "biodegradable construction materials",
     "natural building materials",
     "energy efficient building materials",
+    "renewable construction resources",
+    "zero waste construction materials",
+    "earth friendly construction",
+    "carbon neutral building materials",
+    "hempcrete construction",
+    "rammed earth construction",
+    "reclaimed wood building materials",
+    "innovative sustainable construction",
+    "circular economy construction materials",
+    "sustainable architecture materials"
 ]
 
 # โฟลเดอร์และชื่อไฟล์
