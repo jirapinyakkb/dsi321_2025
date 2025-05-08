@@ -142,9 +142,13 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
     python src/generate_wordcloud.py
     ```
 
+
 ###  Word Cloud from News title
 
+
 ![Word Cloud](image/wordcloud.jpg)
+
+
 
 10. how to check min_max_publish
     ```bash
