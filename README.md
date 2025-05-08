@@ -39,7 +39,7 @@ Install them via:
     "sustainable construction materials",
     "eco friendly building materials",
     "alternative construction methods",
-    "green building materials",
+    "green building materials"
     ]
 
 4. All results will be automatically saved to:
@@ -62,6 +62,19 @@ and show how many duplicates exist, if any.
 
 The check is based on (title, link) pairs.
 It helps ensure your dataset is clean and ready for further analysis or visualization.
+
+# Second Day
+
+6. The script will fetch news articles based on these keywords:
+    ```bash
+     search_keywords = [
+    "recycled construction materials",
+    "low carbon construction materials",
+    "biodegradable construction materials",
+    "natural building materials",
+    "energy efficient building materials",
+    ]
+
 
 
 # Output
