@@ -4,22 +4,23 @@ This project is a web scraper built using Python. It fetches news search results
 
 ---
 # File Structure
-.
-├── README.md
-├── data
-│   └── testv1_scraped.csv
-├── requirements.txt
-└── src
-    ├── __pycache__
-    │   └── generate_wordcloud.cpython-313.pyc
-    ├── check_duplicates.py
-    ├── generate_wordcloud.py
-    ├── minmax_publish.py
-    └── testv1_scraper.py
-└── venv
-└── image
-    └── wordcloud.jpg
-
+    ```bash
+    .
+    ├── README.md
+    ├── data
+    │   └── testv1_scraped.csv
+    ├── requirements.txt
+    └── src
+        ├── __pycache__
+        │   └── generate_wordcloud.cpython-313.pyc
+        ├── check_duplicates.py
+        ├── generate_wordcloud.py
+        ├── minmax_publish.py
+        └── testv1_scraper.py
+    └── venv
+    └── image
+        └── wordcloud.jpg
+    ```
 #  Requirements
 
 Make sure you have Python 3.7+ installed, then install the following packages:
