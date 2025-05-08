@@ -9,6 +9,11 @@ search_keywords = [
     "eco friendly building materials",
     "alternative construction methods",
     "green building materials",
+    "recycled construction materials",
+    "low carbon construction materials",
+    "biodegradable construction materials",
+    "natural building materials",
+    "energy efficient building materials",
 ]
 
 # โฟลเดอร์และชื่อไฟล์
