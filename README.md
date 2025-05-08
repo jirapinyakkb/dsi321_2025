@@ -26,10 +26,13 @@ Install them via:
     ```bash
     git clone https://github.com/yourusername/dsi321_2025.git
     cd dsi321_2025
+    ```
 
-2. Run the scraper:
+2. Create a virtual environment and activate it:
     ```bash
-    python src/testv1_scraper.py
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
 
 # First Day
 
