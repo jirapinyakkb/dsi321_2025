@@ -68,7 +68,7 @@ Install them via:
 
     ```bash
     git add .
-    git commit -m "current README"
+    git commit -m "your comment"
     git push
     ```
 
