@@ -48,9 +48,14 @@ Install them via:
     cd dsi321_2025
     ```
 
-2. Create a virtual environment and activate it:
+2. Create a virtual environment 
     ```bash
     python3 -m venv venv
+    ```
+
+    and activate it:
+
+    ```bash
     source venv/bin/activate
     ```
 
