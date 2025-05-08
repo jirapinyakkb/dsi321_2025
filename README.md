@@ -64,10 +64,18 @@ Install them via:
     python src/testv1_craper.py
     ```
 
+4. Git Push Example
+
+    ```bash
+    git add .
+    git commit -m "current README"
+    git push
+    ```
+
 
 # First Run
 
-4. The script will fetch news articles based on these keywords:
+5. The script will fetch news articles based on these keywords:
     ```bash
      search_keywords = [
     "sustainable construction materials",
@@ -76,13 +84,13 @@ Install them via:
     "green building materials"
     ]
 
-5. All results will be automatically saved to:
+6. All results will be automatically saved to:
     ```bash
     data/testv1_scraped.csv
 
 The script ensures there are no duplicate links, even when running multiple times.
 
-6. Check for Duplicates
+7. Check for Duplicates
     To verify if there are any duplicate news entries (based on both title and link), you can run:
     ```bash
     python src/check_duplicates.py
@@ -99,7 +107,7 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
 
 # Second Run
 
-7. Add the script will fetch news articles based on these keywords:
+8. Add the script will fetch news articles based on these keywords:
     ```bash
 
      search_keywords = [
@@ -116,7 +124,7 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
 
 # Third Run
 
-8. Add the script will fetch news articles based on these keywords:
+9. Add the script will fetch news articles based on these keywords:
     ```bash
 
     search_keywords = [
@@ -143,7 +151,7 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
 
 # How to run for create WORDCLOUD   
 
-9. ```bash
+10. ```bash
     python src/generate_wordcloud.py
     ```
 
@@ -155,7 +163,7 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
 
 
 
-10. how to check min_max_publish
+11. how to check min_max_publish
 
     ```bash
     python src/minmax_publish.py
