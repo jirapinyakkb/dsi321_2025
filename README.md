@@ -4,7 +4,7 @@ This project is a web scraper built using Python. It fetches news search results
 
 ---
 # File Structure
-    ```bash
+    
     .
     ├── README.md
     ├── data
@@ -20,7 +20,7 @@ This project is a web scraper built using Python. It fetches news search results
     └── venv
     └── image
         └── wordcloud.jpg
-    ```
+    
 #  Requirements
 
 Make sure you have Python 3.7+ installed, then install the following packages:
@@ -145,6 +145,11 @@ It helps ensure your dataset is clean and ready for further analysis or visualiz
 ###  Word Cloud from News title
 
 ![Word Cloud](image/wordcloud.jpg)
+
+10. how to check min_max_publish
+    ```bash
+    python src/minmax_publish.py
+    ```
 
 
 # Output
