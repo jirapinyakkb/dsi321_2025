@@ -6,3 +6,4 @@ webdriver-manager
 feedparser
 wordcloud 
 matplotlib
+prefect>=2.0
