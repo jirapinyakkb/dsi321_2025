@@ -2,24 +2,34 @@
 
 This project is a web scraper built using Python. It fetches news search results related to sustainable and alternative construction materials from Google News RSS (via `feedparser`) and stores them in a CSV file for further analysis.
 
+# Prepare & Run the Project
 ---
 # File Structure
     
-    .
-    ├── README.md
-    ├── data
-    │   └── testv1_scraped.csv
-    ├── requirements.txt
-    └── src
-        ├── __pycache__
-        │   └── generate_wordcloud.cpython-313.pyc
-        ├── check_duplicates.py
-        ├── generate_wordcloud.py
-        ├── minmax_publish.py
-        └── testv1_scraper.py
+.
+├── README.md
+├── data
+│   └── testv1_scraped.csv
+├── image
+│   └── wordcloud.jpg
+├── requirements.txt
+└── src
+    ├── Dockerfile.cli
+    ├── __pycache__
+    │   ├── flow.cpython-313.pyc
+    │   └── generate_wordcloud.cpython-313.pyc
+    ├── check_duplicates.py
+    ├── config_path.py
+    ├── docker-compose.yml
+    ├── generate_wordcloud.py
+    ├── main.py
+    ├── minmax_publish.py
+    ├── pyproject.toml
+    ├── removestopword.py
+    ├── start.sh
+    └── streamlis.py
     └── venv
-    └── image
-        └── wordcloud.jpg
+    
     
 #  Requirements
 
@@ -61,7 +71,7 @@ Install them via:
 
 3. Run for scraping
     ```bash
-    python src/testv1_craper.py
+    python src/main.py
     ```
 
 4. Git Push Example

@@ -1,0 +1,21 @@
+keywords = [
+    "sustainable construction materials",
+    "eco friendly building materials",
+    "alternative construction methods",
+    "green building materials",
+    "recycled construction materials",
+    "low carbon construction materials",
+    "biodegradable construction materials",
+    "natural building materials",
+    "energy efficient building materials",
+    "renewable construction resources",
+    "zero waste construction materials",
+    "earth friendly construction",
+    "carbon neutral building materials",
+    "hempcrete construction",
+    "rammed earth construction",
+    "reclaimed wood building materials",
+    "innovative sustainable construction",
+    "circular economy construction materials",
+    "sustainable architecture materials"
+]

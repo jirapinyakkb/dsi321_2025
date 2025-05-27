@@ -4,6 +4,8 @@ beautifulsoup4
 selenium
 webdriver-manager
 feedparser
-wordcloud 
+wordcloud
 matplotlib
 prefect>=2.0
+streamlit
+nltk
