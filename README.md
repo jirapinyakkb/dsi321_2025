@@ -237,11 +237,13 @@ The output
 
     ```bash
     python src/main_2.py
+    ```
 
     Or to run it manually (once):
 
     ```bash
     python src/main_2.py
+    ```
 
 3. Launch the Streamlit Dashboard
 
