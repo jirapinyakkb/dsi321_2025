@@ -5,30 +5,31 @@ This project is a web scraper built using Python. It fetches news search results
 # Prepare & Run the Project
 ---
 # File Structure
-    
-.
-├── README.md
-├── data
-│   └── testv1_scraped.csv
-├── image
-│   └── wordcloud.jpg
-├── requirements.txt
-└── src
-    ├── Dockerfile.cli
-    ├── __pycache__
-    │   ├── flow.cpython-313.pyc
-    │   └── generate_wordcloud.cpython-313.pyc
-    ├── check_duplicates.py
-    ├── config_path.py
-    ├── docker-compose.yml
-    ├── generate_wordcloud.py
-    ├── main.py
-    ├── minmax_publish.py
-    ├── pyproject.toml
-    ├── removestopword.py
-    ├── start.sh
-    └── streamlis.py
-    └── venv
+    ```bash    
+    .
+    ├── README.md
+    ├── data
+    │   └── testv1_scraped.csv
+    ├── image
+    │   └── wordcloud.jpg
+    ├── requirements.txt
+    └── src
+        ├── Dockerfile.cli
+        ├── __pycache__
+        │   ├── flow.cpython-313.pyc
+        │   └── generate_wordcloud.cpython-313.pyc
+        ├── check_duplicates.py
+        ├── config_path.py
+        ├── docker-compose.yml
+        ├── generate_wordcloud.py
+        ├── main.py
+        ├── minmax_publish.py
+        ├── pyproject.toml
+        ├── removestopword.py
+        ├── start.sh
+        └── streamlis.py
+        └── venv
+    ```
     
     
 # Requirements
@@ -214,22 +215,26 @@ The output
 2. Deploy or Run the Scraping Flow
     To deploy the Prefect flow that runs every 15 minutes:
 
+    ```bash
     python src/main_2.py
 
     Or to run it manually (once):
 
+    ```bash
     python src/main_2.py
 
 3. Launch the Streamlit Dashboard
-    
+
+    ```bash    
     streamlit run src/streamlit.py
 
 4. View Prefect UI Open your browser and go to:
 
+    ```bash
     http://localhost:4200
 
 You can monitor scheduled runs and logs from the Prefect UI here.
 
 # Author
-    ```bash
+    
     6524651186 Jirapinya Thanansophon
