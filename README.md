@@ -1,22 +1,26 @@
 # DSI321_BT_Materials
-    This project tracks real-time news on sustainable construction materials using a scheduled scraping pipeline and visualizes the results via a Streamlit dashboard.
 
-- `Key Features`
-Automated Scraping: Fetches news every 15 minutes using feedparser + Prefect 2.0.
-Data Storage: Stores structured, partitioned Parquet files in a version-controlled lakeFS data lake.
-Visualization: Word Cloud & topic trends via Streamlit dashboard.
-Text Processing: Uses re, nltk, and pandas for title cleaning and transformation.
-Environment: Docker Compose setup with Prefect Server, PostgreSQL, lakeFS.
-Version Control: Git & GitHub with >15 commits over 3 weeks.
+This project tracks real-time news on **sustainable construction materials** using a scheduled scraping pipeline and visualizes the results via a **Streamlit dashboard**.
 
-- `Benefits`
-    Real-time insights into green building trends, materials, and supply chain.
-Supports decision-making for procurement, ESG reporting, and R&D.
-Easy access to clean, versioned, and reproducible news data.
+## Key Features
 
-`Tools & Stack`
+- **Automated Scraping**: Fetches news every 15 minutes using `feedparser` + `Prefect 2.0`
+- **Data Storage**: Stores structured, partitioned Parquet files in a version-controlled `lakeFS` data lake
+- **Visualization**: Word Cloud & topic trends via `Streamlit` dashboard
+- **Text Processing**: Uses `re`, `nltk`, and `pandas` for title cleaning and transformation
+- **Environment**: Docker Compose setup with `Prefect Server`, `PostgreSQL`, `lakeFS`
+- **Version Control**: Git & GitHub with >15 commits over 3 weeks
 
-    feedparser, pandas, nltk, re, lakeFS, Prefect 2.0, Streamlit, Docker Compose
+## Benefits
+
+- Real-time insights into **green building trends**, materials, and supply chain
+- Supports decision-making for **procurement**, **ESG reporting**, and **R&D**
+- Easy access to clean, versioned, and reproducible news data
+
+## Tools & Stack
+
+`feedparser`, `pandas`, `nltk`, `re`, `lakeFS`, `Prefect 2.0`, `Streamlit`, `Docker Compose`
+
 
 # Prepare & Run the Project
 ---
