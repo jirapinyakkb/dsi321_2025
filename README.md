@@ -5,7 +5,7 @@ This project is a web scraper built using Python. It fetches news search results
 # Prepare & Run the Project
 ---
 # File Structure
-    ```bash    
+       
     .
     ├── README.md
     ├── data
@@ -29,7 +29,7 @@ This project is a web scraper built using Python. It fetches news search results
         ├── start.sh
         └── streamlis.py
         └── venv
-    ```
+    
     
     
 # Requirements
