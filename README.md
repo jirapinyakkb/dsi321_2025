@@ -31,19 +31,21 @@ This project is a web scraper built using Python. It fetches news search results
     └── venv
     
     
-#  Requirements
+# Requirements
 
-Make sure you have Python 3.7+ installed, then install the following packages:
+Make sure you have **Python 3.7+** installed, then install the following packages:
 
-- `feedparser`
 - `pandas`
 - `requests`
 - `beautifulsoup4`
 - `selenium`
 - `webdriver-manager`
 - `feedparser`
-- `wordcloud `
+- `wordcloud`
 - `matplotlib`
+- `prefect>=2.0`
+- `streamlit`
+- `nltk`
 
 
 Install them via:
@@ -194,3 +196,40 @@ The output
 
 2. Wordcloud form `src/generate_wordcloud.py`
 
+3. Git Push Example
+
+    ```bash
+    git add .
+    git commit -m "your comment"
+    git push
+
+# Running with Docker and Prefect (for scheduling and orchestration)
+
+1. Start Docker Services (Prefect + lakeFS + DB)
+    ```bash
+    docker compose --profile server up -d     # Start Prefect server & database
+    docker compose --profile worker up -d     # Start Prefect worker
+    docker compose --profile cli run cli      # (Optional) Get a shell in CLI container
+
+2. Deploy or Run the Scraping Flow
+    To deploy the Prefect flow that runs every 15 minutes:
+
+    python src/main_2.py
+
+    Or to run it manually (once):
+
+    python src/main_2.py
+
+3. Launch the Streamlit Dashboard
+    
+    streamlit run src/streamlit.py
+
+4. View Prefect UI Open your browser and go to:
+
+    http://localhost:4200
+
+You can monitor scheduled runs and logs from the Prefect UI here.
+
+# Author
+    ```bash
+    6524651186 Jirapinya Thanansophon
